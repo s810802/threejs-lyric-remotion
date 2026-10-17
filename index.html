@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090706" />
+    <title>舟神課程｜歌詞 MV 原型</title>
+    <link rel="stylesheet" href="./prototype.css" />
+  </head>
+  <body>
+    <main class="browser-shell">
+      <div class="mv-stage" id="stage">
+        <img class="cover-backdrop" src="./public/cover.png" alt="舟神課程封面" />
+        <div class="cover-shade"></div><canvas id="scene" aria-hidden="true"></canvas><div class="vignette"></div>
+        <header class="mv-heading"><span class="eyebrow">AI MUSIC · CREATIVE LEARNING</span><span class="heading-title">舟神課程</span></header>
+        <div class="intro-title" id="intro"><span>舟神課程</span><small>每一步，都向前</small></div>
+        <div class="lyric-wrap" id="lyric" aria-live="off"></div>
+        <div class="bottom-mark"><span>舟神課程</span><i></i><span id="stage-time">00:00</span></div>
+      </div>
+      <section class="player-controls" aria-label="影片控制">
+        <audio id="audio" src="./public/song.mp3" preload="metadata" controls aria-label="舟神課程音訊播放器"></audio>
+        <button class="restart-button" id="restart">重新播放</button>
+        <input id="seek" aria-label="播放進度" type="range" min="0" max="1" step="0.0001" value="0" />
+        <span class="player-time" id="player-time">00:00</span><span class="motion-note" id="motion-note"></span>
+      </section>
+    </main>
+    <script src="./prototype.bundle.js"></script>
+  </body>
+</html>
